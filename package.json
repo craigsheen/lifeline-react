@@ -1,0 +1,24 @@
+{
+  "name": "lifeline",
+  "version": "1.0.0",
+  "description": "Package to integrate with lifeline",
+  "main": "dist/index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "author": "Craig Sheen",
+  "license": "ISC",
+  "dependencies": {
+    "@types/prop-types": "^15.7.5",
+    "prop-types": "^15.8.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-modal": "^3.16.1"
+  },
+  "devDependencies": {
+    "@types/react": "^18.2.4",
+    "@types/react-dom": "^18.2.3",
+    "@types/react-modal": "^3.16.0",
+    "typescript": "^5.0.4"
+  }
+}
