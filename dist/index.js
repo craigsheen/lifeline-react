@@ -22,95 +22,148 @@ var __importStar = (this && this.__importStar) || function (mod) {
     __setModuleDefault(result, mod);
     return result;
 };
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
 Object.defineProperty(exports, "__esModule", { value: true });
 var React = __importStar(require("react"));
+var react_modal_1 = __importDefault(require("react-modal"));
+var logo_1 = __importDefault(require("./logo"));
+require("./styles.css");
 var Lifeline = function () {
     var _a = React.useState(''), selectedOption = _a[0], setSelectedOption = _a[1];
-    var buttonStyles = {
-        backgroundColor: 'white',
-        border: '2px solid #003575',
-        borderRadius: '8px',
-        color: '#003575',
-        cursor: 'pointer',
-        fontWeight: '700',
-        marginBottom: '10px',
-        padding: '10px',
+    var modalStyles = {
+        content: {
+            top: 0,
+            left: 0,
+            right: 0,
+            bottom: 0,
+        }
     };
-    var mutedButtonStyles = {
-        backgroundColor: '#D9D9D9',
-        border: '1px solid black',
-        borderRadius: '8px',
-        color: 'black',
-        cursor: 'pointer',
-        marginBottom: '10px',
-        padding: '10px',
-    };
-    var paragraphStyles = {
-        color: '#003575',
-    };
-    var headingStyles = {
-        color: 'black'
-    };
-    var panelStyles = {
-        backgroundColor: '#E8F3FE',
-        borderRadius: '8px',
-    };
-    var lifelineLogo = (React.createElement("svg", { viewBox: "0 0 231.816 49.155", height: "49.155", width: "231.816", xmlSpace: "preserve", xmlns: "http://www.w3.org/2000/svg" },
-        React.createElement("path", { d: "M23.347 21.42a3.458 3.458 0 0 0 2.645 6.387 3.456 3.456 0 1 0-2.645-6.387m8.348 11.12a3.457 3.457 0 1 0-6.388 2.647 3.457 3.457 0 0 0 6.388-2.647M17.646 16.687a3.457 3.457 0 1 0 6.387-2.647 3.457 3.457 0 0 0-6.387 2.647m-.905.9a3.457 3.457 0 1 0-2.644 6.39 3.457 3.457 0 0 0 2.644-6.39m18.5 7.663a3.456 3.456 0 1 0-2.647 6.387 3.456 3.456 0 0 0 2.647-6.387m-11.21 9.936a3.459 3.459 0 0 0-1.87-4.517 3.457 3.457 0 1 0 1.871 4.518m1.275-21.145a3.457 3.457 0 1 0 6.387 2.645 3.457 3.457 0 0 0-6.387-2.645M23.255 6.65A3.456 3.456 0 1 0 25.902.264a3.456 3.456 0 0 0-2.647 6.387m2.646 35.853a3.457 3.457 0 1 0-2.645 6.389 3.457 3.457 0 0 0 2.645-6.389m-11.85-.86a3.456 3.456 0 1 0 4.889 4.888 3.456 3.456 0 0 0-4.888-4.888M35.105 7.507a3.456 3.456 0 1 0-4.889-4.886 3.456 3.456 0 0 0 4.89 4.886M8.521 32.66a3.457 3.457 0 1 0-6.914.002 3.457 3.457 0 0 0 6.914-.002m32.112-16.164a3.458 3.458 0 0 0 6.914 0 3.457 3.457 0 0 0-6.913 0M7.51 18.94a3.458 3.458 0 0 0-4.888-4.888A3.457 3.457 0 1 0 7.51 18.94m34.137 11.277a3.458 3.458 0 0 0 4.888 4.888 3.457 3.457 0 0 0-4.888-4.888M16.496 8.521a3.456 3.456 0 1 0 .002-6.913 3.456 3.456 0 0 0-.002 6.913M32.66 40.633a3.458 3.458 0 0 0 0 6.914 3.457 3.457 0 1 0 0-6.913m5.528-4.315a3.457 3.457 0 1 0 2.644 6.385 3.457 3.457 0 0 0-2.644-6.385M10.965 12.837a3.456 3.456 0 1 0-4.517-1.87 3.456 3.456 0 0 0 4.517 1.87m36.055 8.547a3.457 3.457 0 1 0-2.644 6.39 3.457 3.457 0 0 0 2.644-6.39M6.65 25.9a3.457 3.457 0 1 0-6.389-2.644 3.457 3.457 0 0 0 6.39 2.644m29.668-14.933a3.456 3.456 0 1 0 6.387-2.645 3.456 3.456 0 0 0-6.387 2.645M12.837 38.189a3.457 3.457 0 1 0-6.388 2.649 3.457 3.457 0 0 0 6.388-2.649m1.26-12.937a3.457 3.457 0 1 0 2.647 6.384 3.457 3.457 0 0 0-2.648-6.384m23.014-5.793a3.457 3.457 0 1 0-6.383 2.647 3.457 3.457 0 0 0 6.383-2.647m55.177-8.079a2.932 2.932 0 0 0 2.93-2.932V4.784a2.933 2.933 0 0 0-5.866 0v3.664c0 1.62 1.315 2.93 2.936 2.932m.079 2.859a2.932 2.932 0 0 0-2.932 2.932v29.051a2.933 2.933 0 0 0 5.865 0v-29.05a2.933 2.933 0 0 0-2.933-2.933m65.905-2.859a2.932 2.932 0 0 0 2.931-2.932V4.784a2.933 2.933 0 0 0-5.866 0v3.664c0 1.62 1.315 2.93 2.935 2.932m.08 2.859a2.932 2.932 0 0 0-2.933 2.932v29.051a2.933 2.933 0 0 0 5.865 0v-29.05a2.933 2.933 0 0 0-2.932-2.933m40.06 32.02-.052-15.674c-.008-9.207-7.46-16.67-16.666-16.67-9.204 0-16.667 7.466-16.667 16.67l.011 15.632-.004.005a2.933 2.933 0 0 0 5.865 0v-4.944l.003-.003V30.561c0-5.965 4.836-10.803 10.8-10.803 5.967 0 10.795 4.837 10.8 10.803l.029 8.949h.005v.618l.009 6.094a2.932 2.932 0 0 0 5.863.035v.002m-47.71-.037a2.933 2.933 0 0 1-5.865 0V4.44a2.932 2.932 0 1 1 5.865 0v41.782m-67.05-2.932H73.213c-4.518 0-8.02-3.263-8.022-7.329V4.674C65.19 3.119 64.039 1.86 62.42 1.86c-1.62 0-3.094 1.26-3.094 2.814v31.295c.008 6.94 6.148 13.166 13.853 13.185h10.468a2.914 2.914 0 0 0 2.932-2.91c-.001-1.62-1.313-2.954-2.932-2.954m43.543-22.031c1.974 0 3.825.522 5.426 1.432l-14.999 15a10.945 10.945 0 0 1-1.433-5.426c-.002-6.08 4.93-11.006 11.006-11.006zm13.407 15.828a2.937 2.937 0 0 0-4.043.955 10.994 10.994 0 0 1-14.79 3.795l15.846-15.852c1.93-1.934 1.913-5.08-.037-7.031l-.698-.521a16.799 16.799 0 0 0-9.684-3.058c-9.327 0-16.894 7.56-16.891 16.89 0 9.32 7.564 16.886 16.89 16.89 6.074 0 11.398-3.211 14.374-8.026a2.94 2.94 0 0 0-.967-4.042m76.412-15.828c1.973 0 3.823.522 5.425 1.432l-14.998 15a10.945 10.945 0 0 1-1.434-5.426c0-6.08 4.93-11.006 11.007-11.006zm13.405 15.828a2.935 2.935 0 0 0-4.04.955h-.004a10.99 10.99 0 0 1-14.788 3.795l15.845-15.852c1.93-1.934 1.914-5.08-.037-7.031l-.697-.521a16.8 16.8 0 0 0-9.685-3.058c-9.326 0-16.893 7.56-16.89 16.89 0 9.32 7.564 16.886 16.89 16.89 6.074 0 11.397-3.211 14.374-8.026a2.941 2.941 0 0 0-.969-4.042" }),
-        React.createElement("path", { d: "M117.136 1.825h-4.419c-6.951.002-13.191 6.16-13.194 13.882h-.004v30.38c0 1.693 1.314 3.067 2.933 3.068 1.619 0 2.932-1.375 2.932-3.067V21.742h5.46a2.933 2.933 0 0 0 0-5.865h-5.46v-.165h.003c0-4.52 3.265-8.022 7.333-8.022h4.416a2.933 2.933 0 0 0 0-5.865" })));
-    var modalStyles = {};
-    // if (selectedOption === 'good') {
-    //   <section>
-    //     <p style={paragraphStyles}>
-    //       That's great to hear! Don't forget Lifeline are always here if you need us.
-    //     </p>
-    //   </section>
-    // }
-    // if (selectedOption === 'average') {
-    //   <section>
-    //     <Modal
-    //       isOpen={true}
-    //       style={modalStyles}
-    //       contentLabel="Lifeline Modal"
-    //     >
-    //       <button >close</button>
-    //       <h2>I'm feeling average</h2>
-    //       <div style={panelStyles}>
-    //         {lifelineLogo}
-    //         <p>It's never too early to take steps to manage your mental health.</p>
-    //         <p>You can connect with a Lifeline Crisis Supporter via phone, text or online chat at anytime.</p>
-    //         <p>Lifeline also offer an online Support Toolkit, full of practical information, tools, techniques, stories and more, to help you understand what you're feeling and find ways to help.</p>
-    //       </div>
-    //       <button
-    //         style={buttonStyles}
-    //         onClick={() => setSelectedOption('lifelineSupport')}
-    //       >
-    //         Contact Lifeline directly<br />
-    //         <span>Phone, Text or Chat</span>
-    //       </button>
-    //       <button
-    //         style={buttonStyles}
-    //         onClick={() => setSelectedOption('openExternal')}
-    //       >
-    //         Access online Support Toolkit<br />
-    //         <span>lifeline.org.au/toolkit</span>
-    //       </button>
-    //       <button
-    //         style={mutedButtonStyles}
-    //         onClick={() => setSelectedOption('lifelineSupportToolkit')}
-    //       >
-    //         Learn more about support toolkit
-    //       </button>
-    //     </Modal>
-    //   </section>
-    // }
-    // if (selectedOption === 'bad') {
-    // }
-    return (React.createElement("section", { style: { maxWidth: '300px' } },
-        React.createElement("p", { style: headingStyles }, "How are you feeling right now?"),
+    if (selectedOption === 'lifelineSupportToolkit') {
+        return (React.createElement("section", { className: 'section' },
+            React.createElement(react_modal_1.default, { isOpen: true, style: modalStyles, contentLabel: "Lifeline Modal" },
+                React.createElement("a", { onClick: function () { return setSelectedOption('average'); }, style: { cursor: 'pointer' } },
+                    React.createElement("svg", { xmlns: "http://www.w3.org/2000/svg", version: "1.1", width: "30", height: "30", viewBox: "0 0 256 256", xmlSpace: "preserve" },
+                        React.createElement("g", { transform: "translate(1.4065934065934016 1.4065934065934016) scale(2.81 2.81)" },
+                            React.createElement("path", { d: "M 45 90 c 24.813 0 45 -20.187 45 -45 C 90 20.187 69.813 0 45 0 C 20.187 0 0 20.187 0 45 C 0 69.813 20.187 90 45 90 z M 45 7 c 20.953 0 38 17.047 38 38 S 65.953 83 45 83 S 7 65.953 7 45 S 24.047 7 45 7 z", transform: " matrix(1 0 0 1 0 0) ", "stroke-linecap": "round" }),
+                            React.createElement("path", { d: "M 53.478 65.456 c 0.896 0 1.792 -0.342 2.475 -1.025 c 1.367 -1.366 1.367 -3.583 0 -4.949 L 41.472 45 l 14.481 -14.481 c 1.367 -1.366 1.367 -3.583 0 -4.95 c -1.367 -1.366 -3.583 -1.365 -4.95 0 L 34.048 42.525 c -1.367 1.366 -1.367 3.583 0 4.949 l 16.955 16.956 C 51.687 65.114 52.583 65.456 53.478 65.456 z", transform: " matrix(1 0 0 1 0 0) ", "stroke-linecap": "round" })))),
+                React.createElement("div", { style: { marginTop: '20px' } },
+                    React.createElement(logo_1.default, null)),
+                React.createElement("h1", { className: 'heading' }, "Lifeline Support Toolkit"),
+                React.createElement("p", null, "Lifeline's Support Toolkit is a free online tool to help you find ways to improve how you're feeling. It includes;"),
+                React.createElement("ul", null,
+                    React.createElement("li", null, "Practical, plain language information and advice"),
+                    React.createElement("li", null, "Evidence based short term and long term strategies for managing your mental health"),
+                    React.createElement("li", null, "Curated tools, techniques and apps you can use on your own to help"),
+                    React.createElement("li", null, "Real stories of other people's experiences"),
+                    React.createElement("li", null, "Other support services you can connect with.")),
+                React.createElement("div", { style: { display: 'flex', flexDirection: 'column' } },
+                    React.createElement("a", { className: 'button', onClick: function () { return setSelectedOption('openExternal'); } },
+                        "Access online Support Toolkit",
+                        React.createElement("br", null),
+                        React.createElement("span", { style: { fontSize: '12px', fontWeight: 400 } }, "lifeline.org.au/toolkit"))))));
+    }
+    if (selectedOption === 'lifelineCrisisSupport') {
+        return (React.createElement("section", { className: 'section' },
+            React.createElement(react_modal_1.default, { isOpen: true, style: modalStyles, contentLabel: "Lifeline Modal" },
+                React.createElement("a", { onClick: function () { return setSelectedOption('average'); }, style: { cursor: 'pointer' } },
+                    React.createElement("svg", { xmlns: "http://www.w3.org/2000/svg", version: "1.1", width: "30", height: "30", viewBox: "0 0 256 256", xmlSpace: "preserve" },
+                        React.createElement("g", { transform: "translate(1.4065934065934016 1.4065934065934016) scale(2.81 2.81)" },
+                            React.createElement("path", { d: "M 45 90 c 24.813 0 45 -20.187 45 -45 C 90 20.187 69.813 0 45 0 C 20.187 0 0 20.187 0 45 C 0 69.813 20.187 90 45 90 z M 45 7 c 20.953 0 38 17.047 38 38 S 65.953 83 45 83 S 7 65.953 7 45 S 24.047 7 45 7 z", transform: " matrix(1 0 0 1 0 0) ", "stroke-linecap": "round" }),
+                            React.createElement("path", { d: "M 53.478 65.456 c 0.896 0 1.792 -0.342 2.475 -1.025 c 1.367 -1.366 1.367 -3.583 0 -4.949 L 41.472 45 l 14.481 -14.481 c 1.367 -1.366 1.367 -3.583 0 -4.95 c -1.367 -1.366 -3.583 -1.365 -4.95 0 L 34.048 42.525 c -1.367 1.366 -1.367 3.583 0 4.949 l 16.955 16.956 C 51.687 65.114 52.583 65.456 53.478 65.456 z", transform: " matrix(1 0 0 1 0 0) ", "stroke-linecap": "round" })))),
+                React.createElement("div", { style: { marginTop: '20px' } },
+                    React.createElement(logo_1.default, null)),
+                React.createElement("h1", { className: 'heading' }, "Lifeline Crisis Toolkit"),
+                React.createElement("p", null, "Lifeline is free and confidential. You can speak with a trained Crisis Supporter over the phone, or through text."),
+                React.createElement("ul", null,
+                    React.createElement("li", null, "You can choose to remain anonymous."),
+                    React.createElement("li", null, "Talk about whatever's on your mind, nothing is too big or too small."),
+                    React.createElement("li", null, "Your Crisis Supporter will listen, provide support, and can work with you to explore your options for further help.")),
+                React.createElement("div", { style: { display: 'flex', flexDirection: 'column' } },
+                    React.createElement("a", { className: 'button', href: "tel: 13 11 14" },
+                        "Call Lifeline",
+                        React.createElement("br", null),
+                        React.createElement("span", { style: { fontSize: '12px', fontWeight: 400 } }, "13 11 14")),
+                    React.createElement("a", { className: 'button', href: "sms:+61477131114?&body=Hi%2C%20I%E2%80%99d%20like%20to%20connect%20with%20a%20Lifeline%20Crisis%20Supporter." },
+                        "Text Lifeline",
+                        React.createElement("br", null),
+                        React.createElement("span", { style: { fontSize: '12px', fontWeight: 400 } }, "0477 13 11 14")),
+                    React.createElement("a", { className: 'button', href: 'https://lifeline.org.au/crisis-chat', target: '_blank' },
+                        "Chat with Lifeline",
+                        React.createElement("br", null),
+                        React.createElement("span", { style: { fontSize: '12px', fontWeight: 400 } }, "lifeline.org.au/crisis-chat"))))));
+    }
+    if (selectedOption === 'openExternal') {
+        return (React.createElement("iframe", { src: 'https://mellifluous-empanada-24e5c2.netlify.app', style: { height: '100vh', width: '100vw' } }));
+    }
+    if (selectedOption === 'good') {
+        return (React.createElement("section", { className: 'section' },
+            React.createElement("p", null, "That's great to hear! Don't forget Lifeline are always here if you need us.")));
+    }
+    if (selectedOption === 'average') {
+        return (React.createElement("section", { className: 'section' },
+            React.createElement(react_modal_1.default, { isOpen: true, style: modalStyles, contentLabel: "Lifeline Modal" },
+                React.createElement("a", { onClick: function () { return setSelectedOption(''); }, style: { cursor: 'pointer' } },
+                    React.createElement("svg", { xmlns: "http://www.w3.org/2000/svg", version: "1.1", width: "30", height: "30", viewBox: "0 0 256 256", xmlSpace: "preserve" },
+                        React.createElement("g", { transform: "translate(1.4065934065934016 1.4065934065934016) scale(2.81 2.81)" },
+                            React.createElement("path", { d: "M 45 90 c 24.813 0 45 -20.187 45 -45 C 90 20.187 69.813 0 45 0 C 20.187 0 0 20.187 0 45 C 0 69.813 20.187 90 45 90 z M 45 7 c 20.953 0 38 17.047 38 38 S 65.953 83 45 83 S 7 65.953 7 45 S 24.047 7 45 7 z", transform: " matrix(1 0 0 1 0 0) ", "stroke-linecap": "round" }),
+                            React.createElement("path", { d: "M 53.478 65.456 c 0.896 0 1.792 -0.342 2.475 -1.025 c 1.367 -1.366 1.367 -3.583 0 -4.949 L 41.472 45 l 14.481 -14.481 c 1.367 -1.366 1.367 -3.583 0 -4.95 c -1.367 -1.366 -3.583 -1.365 -4.95 0 L 34.048 42.525 c -1.367 1.366 -1.367 3.583 0 4.949 l 16.955 16.956 C 51.687 65.114 52.583 65.456 53.478 65.456 z", transform: " matrix(1 0 0 1 0 0) ", "stroke-linecap": "round" })))),
+                React.createElement("h1", { className: 'heading' }, "I'm feeling average"),
+                React.createElement("div", { className: 'panel' },
+                    React.createElement(logo_1.default, null),
+                    React.createElement("p", null, "It's never too early to take steps to manage your mental health."),
+                    React.createElement("p", null, "You can connect with a Lifeline Crisis Supporter via phone, text or online chat at anytime."),
+                    React.createElement("p", null, "Lifeline also offer an online Support Toolkit, full of practical information, tools, techniques, stories and more, to help you understand what you're feeling and find ways to help."),
+                    React.createElement("div", { style: { display: 'flex', flexDirection: 'column' } },
+                        React.createElement("a", { className: 'button', onClick: function () { return setSelectedOption('lifelineCrisisSupport'); } },
+                            "Contact Lifeline directly",
+                            React.createElement("br", null),
+                            React.createElement("span", { style: { fontSize: '12px', fontWeight: 400 } }, "Phone, Text or Chat")),
+                        React.createElement("a", { className: 'button', onClick: function () { return setSelectedOption('openExternal'); } },
+                            "Access online Support Toolkit",
+                            React.createElement("br", null),
+                            React.createElement("span", { style: { fontSize: '12px', fontWeight: 400 } }, "lifeline.org.au/toolkit")),
+                        React.createElement("a", { className: 'muted-button', onClick: function () { return setSelectedOption('lifelineSupportToolkit'); } }, "Learn more about support toolkit"))))));
+    }
+    if (selectedOption === 'bad') {
+        return (React.createElement("section", { className: 'section' },
+            React.createElement(react_modal_1.default, { isOpen: true, style: modalStyles, contentLabel: "Lifeline Modal" },
+                React.createElement("a", { onClick: function () { return setSelectedOption(''); }, style: { cursor: 'pointer' } },
+                    React.createElement("svg", { xmlns: "http://www.w3.org/2000/svg", version: "1.1", width: "30", height: "30", viewBox: "0 0 256 256", xmlSpace: "preserve" },
+                        React.createElement("g", { transform: "translate(1.4065934065934016 1.4065934065934016) scale(2.81 2.81)" },
+                            React.createElement("path", { d: "M 45 90 c 24.813 0 45 -20.187 45 -45 C 90 20.187 69.813 0 45 0 C 20.187 0 0 20.187 0 45 C 0 69.813 20.187 90 45 90 z M 45 7 c 20.953 0 38 17.047 38 38 S 65.953 83 45 83 S 7 65.953 7 45 S 24.047 7 45 7 z", transform: " matrix(1 0 0 1 0 0) ", "stroke-linecap": "round" }),
+                            React.createElement("path", { d: "M 53.478 65.456 c 0.896 0 1.792 -0.342 2.475 -1.025 c 1.367 -1.366 1.367 -3.583 0 -4.949 L 41.472 45 l 14.481 -14.481 c 1.367 -1.366 1.367 -3.583 0 -4.95 c -1.367 -1.366 -3.583 -1.365 -4.95 0 L 34.048 42.525 c -1.367 1.366 -1.367 3.583 0 4.949 l 16.955 16.956 C 51.687 65.114 52.583 65.456 53.478 65.456 z", transform: " matrix(1 0 0 1 0 0) ", "stroke-linecap": "round" })))),
+                React.createElement("h1", { className: 'heading' }, "I'm not ok"),
+                React.createElement("div", { className: 'warning-panel' },
+                    React.createElement("p", null,
+                        "If life is in danger ",
+                        React.createElement("strong", null, "call triple zero (000)."))),
+                React.createElement("div", { className: 'panel' },
+                    React.createElement(logo_1.default, null),
+                    React.createElement("p", null, "If you're open to it, you can speak with a Lifeline Crisis Supporter 24/7 who will listen to and support you without judgement."),
+                    React.createElement("p", null, "Crisis looks different for everyone."),
+                    React.createElement("p", null, "Whether you're thinking about suicide, having a difficult time or require some support now, Lifeline is here for you."),
+                    React.createElement("div", { style: { display: 'flex', flexDirection: 'column' } },
+                        React.createElement("a", { className: 'button', href: "tel: 13 11 14" },
+                            "Call Lifeline",
+                            React.createElement("br", null),
+                            React.createElement("span", { style: { fontSize: '12px', fontWeight: 400 } }, "13 11 14")),
+                        React.createElement("a", { className: 'button', href: "sms:+61477131114?&body=Hi%2C%20I%E2%80%99d%20like%20to%20connect%20with%20a%20Lifeline%20Crisis%20Supporter." },
+                            "Text Lifeline",
+                            React.createElement("br", null),
+                            React.createElement("span", { style: { fontSize: '12px', fontWeight: 400 } }, "0477 13 11 14")),
+                        React.createElement("a", { className: 'button', href: 'https://lifeline.org.au/crisis-chat', target: '_blank' },
+                            "Chat with Lifeline",
+                            React.createElement("br", null),
+                            React.createElement("span", { style: { fontSize: '12px', fontWeight: 400 } }, "lifeline.org.au/crisis-chat")),
+                        React.createElement("a", { className: 'muted-button', onClick: function () { return setSelectedOption('lifelineCrisisSupport'); } }, "Learn more"))))));
+    }
+    return (React.createElement("section", { className: 'section' },
+        React.createElement("h1", { className: 'heading' }, "How are you feeling right now?"),
         React.createElement("div", { style: { display: 'flex', flexDirection: 'column' } },
-            React.createElement("a", { style: buttonStyles, onClick: function () { return setSelectedOption('good'); } }, "I'm feeling good!"),
-            React.createElement("a", { style: buttonStyles, onClick: function () { return setSelectedOption('average'); } }, "I'm feeling average"),
-            React.createElement("a", { style: buttonStyles, onClick: function () { return setSelectedOption('bad'); } }, "I'm not okay"))));
+            React.createElement("a", { className: 'button', onClick: function () { return setSelectedOption('good'); } }, "I'm feeling good!"),
+            React.createElement("a", { className: 'button', onClick: function () { return setSelectedOption('average'); } }, "I'm feeling average"),
+            React.createElement("a", { className: 'button', onClick: function () { return setSelectedOption('bad'); } }, "I'm not okay"))));
 };
 exports.default = Lifeline;
