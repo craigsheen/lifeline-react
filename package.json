@@ -1,5 +1,5 @@
 {
-  "name": "lifeline",
+  "name": "lifeline-react",
   "version": "1.0.0",
   "description": "Package to integrate with lifeline",
   "main": "dist/index.js",
