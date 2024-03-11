@@ -126,7 +126,13 @@ const Lifeline: React.FC = () => {
 
   if (selectedOption === 'openExternal') {
     return (
-      <iframe src='https://mellifluous-empanada-24e5c2.netlify.app' style={{ height: '100vh', width: '100vw' }} />
+      <Modal
+        isOpen={true}
+        style={modalStyles}
+        contentLabel="Lifeline Modal"
+      >
+        <iframe src='https://mellifluous-empanada-24e5c2.netlify.app' style={{ height: '100vh', width: '100vw' }} />
+      </Modal>
     )
   }
 
