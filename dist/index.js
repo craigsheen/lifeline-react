@@ -99,7 +99,8 @@ var Lifeline = function () {
                         React.createElement("span", { style: { fontSize: '12px', fontWeight: 400 } }, "lifeline.org.au/crisis-chat"))))));
     }
     if (selectedOption === 'openExternal') {
-        return (React.createElement("iframe", { src: 'https://mellifluous-empanada-24e5c2.netlify.app', style: { height: '100vh', width: '100vw' } }));
+        return (React.createElement(react_modal_1.default, { isOpen: true, style: modalStyles, contentLabel: "Lifeline Modal" },
+            React.createElement("iframe", { src: 'https://mellifluous-empanada-24e5c2.netlify.app', style: { height: '100vh', width: '100vw' } })));
     }
     if (selectedOption === 'good') {
         return (React.createElement("section", { className: 'section' },
