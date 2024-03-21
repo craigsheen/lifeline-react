@@ -4,7 +4,6 @@
   "description": "Package to integrate with lifeline",
   "main": "dist/index.js",
   "scripts": {
-    "build": "parcel build src/index.tsx --dist-dir dist",
     "test": "test"
   },
   "author": "Craig Sheen",
@@ -20,7 +19,6 @@
     "@types/react": "^18.2.4",
     "@types/react-dom": "^18.2.3",
     "@types/react-modal": "^3.16.0",
-    "parcel": "^2.12.0",
     "typescript": "^5.0.4"
   }
 }
