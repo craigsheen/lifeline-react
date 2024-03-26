@@ -29,12 +29,12 @@ const Lifeline: React.FC = () => {
 
   if (selectedOption === 'lifelineSupportToolkit') {
     return (
-      <section className='section'>
-        <Modal
+      <Modal
           isOpen={true}
           style={modalStyles}
           contentLabel="Lifeline Modal"
         >
+        <section className='section'>
           <a onClick={() => setSelectedOption('average')} style={{ cursor: 'pointer' }}>
             <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="30" height="30" viewBox="0 0 256 256" xmlSpace="preserve">
               <g transform="translate(1.4065934065934016 1.4065934065934016) scale(2.81 2.81)" >
@@ -64,19 +64,19 @@ const Lifeline: React.FC = () => {
               <span style={{ fontSize: '12px', fontWeight: 400 }}>lifeline.org.au/toolkit</span>
             </a>
           </div>
-        </Modal>
-      </section>
+        </section>
+      </Modal>
     )
   }
 
   if (selectedOption === 'lifelineCrisisSupport') {
     return (
-      <section className='section'>
-        <Modal
+      <Modal
           isOpen={true}
           style={modalStyles}
           contentLabel="Lifeline Modal"
         >
+        <section className='section'>
           <a onClick={() => setSelectedOption('average')} style={{ cursor: 'pointer' }}>
             <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="30" height="30" viewBox="0 0 256 256" xmlSpace="preserve">
               <g transform="translate(1.4065934065934016 1.4065934065934016) scale(2.81 2.81)" >
@@ -119,8 +119,8 @@ const Lifeline: React.FC = () => {
               <span style={{ fontSize: '12px', fontWeight: 400 }}>lifeline.org.au/crisis-chat</span>
             </a>
           </div>
-        </Modal>
-      </section>
+        </section>
+      </Modal>
     )
   }
 
@@ -131,19 +131,19 @@ const Lifeline: React.FC = () => {
         style={modalStyles}
         contentLabel="Lifeline Modal"
       >
-        <iframe src='https://mellifluous-empanada-24e5c2.netlify.app' style={{ height: '100vh', width: '100vw' }} />
+        <iframe src='https://mellifluous-empanada-24e5c2.netlify.app' style={{ height: '100vh', width: '100%' }} />
       </Modal>
     )
   }
 
   if (selectedOption === 'good') {
     return (
-      <section className='section'>
-        <Modal
+      <Modal
           isOpen={true}
           style={modalStyles}
           contentLabel="Lifeline Modal"
         >
+        <section className='section'>
           <a onClick={() => setSelectedOption('questions')} style={{ cursor: 'pointer' }}>
             <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="30" height="30" viewBox="0 0 256 256" xmlSpace="preserve">
               <g transform="translate(1.4065934065934016 1.4065934065934016) scale(2.81 2.81)" >
@@ -156,19 +156,19 @@ const Lifeline: React.FC = () => {
           <p>
             That's great to hear! Don't forget Lifeline are always here if you need us.
           </p>
-        </Modal>
-      </section>
+        </section>
+      </Modal>
     )
   }
 
   if (selectedOption === 'average') {
     return (
-      <section className='section'>
-        <Modal
+      <Modal
           isOpen={true}
           style={modalStyles}
           contentLabel="Lifeline Modal"
         >
+        <section className='section'>
           <a onClick={() => setSelectedOption('')} style={{ cursor: 'pointer' }}>
             <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="30" height="30" viewBox="0 0 256 256" xmlSpace="preserve">
               <g transform="translate(1.4065934065934016 1.4065934065934016) scale(2.81 2.81)" >
@@ -206,19 +206,19 @@ const Lifeline: React.FC = () => {
               </a>
             </div>
           </div>
-        </Modal>
-      </section>
+        </section>
+      </Modal>
     )
   }
 
   if (selectedOption === 'bad') {
     return (
-      <section className='section'>
-        <Modal
+      <Modal
           isOpen={true}
           style={modalStyles}
           contentLabel="Lifeline Modal"
         >
+        <section className='section'>
           <a onClick={() => setSelectedOption('')} style={{ cursor: 'pointer' }}>
             <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="30" height="30" viewBox="0 0 256 256" xmlSpace="preserve">
               <g transform="translate(1.4065934065934016 1.4065934065934016) scale(2.81 2.81)" >
@@ -267,18 +267,18 @@ const Lifeline: React.FC = () => {
               </a>
             </div>
           </div>
-        </Modal>
-      </section>
+        </section>
+      </Modal>
     )
   }
 
   return (
-    <section className='section'>
-      <Modal
+    <Modal
         isOpen={true}
         style={modalStyles}
         contentLabel="Lifeline Modal"
       >
+      <section className='section'>
         <a onClick={() => setSelectedOption('base')} style={{ cursor: 'pointer' }}>
           <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="30" height="30" viewBox="0 0 256 256" xmlSpace="preserve">
             <g transform="translate(1.4065934065934016 1.4065934065934016) scale(2.81 2.81)" >
@@ -308,8 +308,8 @@ const Lifeline: React.FC = () => {
             I'm not okay
           </a>
         </div>
-      </Modal>
-    </section>
+      </section>
+    </Modal>
   );
 };
 

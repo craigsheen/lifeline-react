@@ -45,8 +45,8 @@ var Lifeline = function () {
         return (React.createElement("button", { className: 'button', onClick: function () { return setSelectedOption('questions'); } }, "How are you feeling right now?"));
     }
     if (selectedOption === 'lifelineSupportToolkit') {
-        return (React.createElement("section", { className: 'section' },
-            React.createElement(react_modal_1.default, { isOpen: true, style: modalStyles, contentLabel: "Lifeline Modal" },
+        return (React.createElement(react_modal_1.default, { isOpen: true, style: modalStyles, contentLabel: "Lifeline Modal" },
+            React.createElement("section", { className: 'section' },
                 React.createElement("a", { onClick: function () { return setSelectedOption('average'); }, style: { cursor: 'pointer' } },
                     React.createElement("svg", { xmlns: "http://www.w3.org/2000/svg", version: "1.1", width: "30", height: "30", viewBox: "0 0 256 256", xmlSpace: "preserve" },
                         React.createElement("g", { transform: "translate(1.4065934065934016 1.4065934065934016) scale(2.81 2.81)" },
@@ -69,8 +69,8 @@ var Lifeline = function () {
                         React.createElement("span", { style: { fontSize: '12px', fontWeight: 400 } }, "lifeline.org.au/toolkit"))))));
     }
     if (selectedOption === 'lifelineCrisisSupport') {
-        return (React.createElement("section", { className: 'section' },
-            React.createElement(react_modal_1.default, { isOpen: true, style: modalStyles, contentLabel: "Lifeline Modal" },
+        return (React.createElement(react_modal_1.default, { isOpen: true, style: modalStyles, contentLabel: "Lifeline Modal" },
+            React.createElement("section", { className: 'section' },
                 React.createElement("a", { onClick: function () { return setSelectedOption('average'); }, style: { cursor: 'pointer' } },
                     React.createElement("svg", { xmlns: "http://www.w3.org/2000/svg", version: "1.1", width: "30", height: "30", viewBox: "0 0 256 256", xmlSpace: "preserve" },
                         React.createElement("g", { transform: "translate(1.4065934065934016 1.4065934065934016) scale(2.81 2.81)" },
@@ -100,11 +100,11 @@ var Lifeline = function () {
     }
     if (selectedOption === 'openExternal') {
         return (React.createElement(react_modal_1.default, { isOpen: true, style: modalStyles, contentLabel: "Lifeline Modal" },
-            React.createElement("iframe", { src: 'https://mellifluous-empanada-24e5c2.netlify.app', style: { height: '100vh', width: '100vw' } })));
+            React.createElement("iframe", { src: 'https://mellifluous-empanada-24e5c2.netlify.app', style: { height: '100vh', width: '100%' } })));
     }
     if (selectedOption === 'good') {
-        return (React.createElement("section", { className: 'section' },
-            React.createElement(react_modal_1.default, { isOpen: true, style: modalStyles, contentLabel: "Lifeline Modal" },
+        return (React.createElement(react_modal_1.default, { isOpen: true, style: modalStyles, contentLabel: "Lifeline Modal" },
+            React.createElement("section", { className: 'section' },
                 React.createElement("a", { onClick: function () { return setSelectedOption('questions'); }, style: { cursor: 'pointer' } },
                     React.createElement("svg", { xmlns: "http://www.w3.org/2000/svg", version: "1.1", width: "30", height: "30", viewBox: "0 0 256 256", xmlSpace: "preserve" },
                         React.createElement("g", { transform: "translate(1.4065934065934016 1.4065934065934016) scale(2.81 2.81)" },
@@ -114,8 +114,8 @@ var Lifeline = function () {
                 React.createElement("p", null, "That's great to hear! Don't forget Lifeline are always here if you need us."))));
     }
     if (selectedOption === 'average') {
-        return (React.createElement("section", { className: 'section' },
-            React.createElement(react_modal_1.default, { isOpen: true, style: modalStyles, contentLabel: "Lifeline Modal" },
+        return (React.createElement(react_modal_1.default, { isOpen: true, style: modalStyles, contentLabel: "Lifeline Modal" },
+            React.createElement("section", { className: 'section' },
                 React.createElement("a", { onClick: function () { return setSelectedOption(''); }, style: { cursor: 'pointer' } },
                     React.createElement("svg", { xmlns: "http://www.w3.org/2000/svg", version: "1.1", width: "30", height: "30", viewBox: "0 0 256 256", xmlSpace: "preserve" },
                         React.createElement("g", { transform: "translate(1.4065934065934016 1.4065934065934016) scale(2.81 2.81)" },
@@ -139,8 +139,8 @@ var Lifeline = function () {
                         React.createElement("a", { className: 'muted-button', onClick: function () { return setSelectedOption('lifelineSupportToolkit'); } }, "Learn more about support toolkit"))))));
     }
     if (selectedOption === 'bad') {
-        return (React.createElement("section", { className: 'section' },
-            React.createElement(react_modal_1.default, { isOpen: true, style: modalStyles, contentLabel: "Lifeline Modal" },
+        return (React.createElement(react_modal_1.default, { isOpen: true, style: modalStyles, contentLabel: "Lifeline Modal" },
+            React.createElement("section", { className: 'section' },
                 React.createElement("a", { onClick: function () { return setSelectedOption(''); }, style: { cursor: 'pointer' } },
                     React.createElement("svg", { xmlns: "http://www.w3.org/2000/svg", version: "1.1", width: "30", height: "30", viewBox: "0 0 256 256", xmlSpace: "preserve" },
                         React.createElement("g", { transform: "translate(1.4065934065934016 1.4065934065934016) scale(2.81 2.81)" },
@@ -171,8 +171,8 @@ var Lifeline = function () {
                             React.createElement("span", { style: { fontSize: '12px', fontWeight: 400 } }, "lifeline.org.au/crisis-chat")),
                         React.createElement("a", { className: 'muted-button', onClick: function () { return setSelectedOption('lifelineCrisisSupport'); } }, "Learn more"))))));
     }
-    return (React.createElement("section", { className: 'section' },
-        React.createElement(react_modal_1.default, { isOpen: true, style: modalStyles, contentLabel: "Lifeline Modal" },
+    return (React.createElement(react_modal_1.default, { isOpen: true, style: modalStyles, contentLabel: "Lifeline Modal" },
+        React.createElement("section", { className: 'section' },
             React.createElement("a", { onClick: function () { return setSelectedOption('base'); }, style: { cursor: 'pointer' } },
                 React.createElement("svg", { xmlns: "http://www.w3.org/2000/svg", version: "1.1", width: "30", height: "30", viewBox: "0 0 256 256", xmlSpace: "preserve" },
                     React.createElement("g", { transform: "translate(1.4065934065934016 1.4065934065934016) scale(2.81 2.81)" },
